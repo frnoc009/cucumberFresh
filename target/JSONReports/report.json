@@ -1,0 +1,89 @@
+[
+  {
+    "line": 6,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-19T16:46:06.895Z",
+        "line": 9,
+        "name": "User is able to login with valid credentials",
+        "description": "",
+        "id": "login-into-app;user-is-able-to-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19725000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user is on the Login page",
+            "match": {
+              "location": "StepDefinitions.Login.LoginSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1116000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "enters valid username and valid password",
+            "match": {
+              "location": "StepDefinitions.Login.LoginSteps.enters_valid_username_and_valid_password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified\n  (Session info: chrome\u003d84.0.4147.125)\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception\nBuild info: version: \u00274.0.0-alpha-6\u0027, revision: \u00275f43a29cfc\u0027\nSystem info: host: \u0027Unknown\u0027, ip: \u0027Unknown\u0027, os.name: \u0027Linux\u0027, os.arch: \u0027amd64\u0027, os.version: \u00274.15.0-112-generic\u0027, java.version: \u00271.8.0_265\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /tmp/.com.google.Chrome.veYb4J}, goog:chromeOptions: {debuggerAddress: localhost:34963}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 798d4728f2e732a9747d3e01cd48d3f8\n*** Element info: {Using\u003dcss selector, value\u003ddiv.row:nth-child(2) div.large-12.columns:nth-child(2) div.example form:nth-child(3)\" +\n            \" button.radius:nth-child(3) \u003e i.fa.fa-2x.fa-sign-in}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:441)\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:494)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)\n\tat StepDefinitions.Login.LoginSteps.user_clicks_the_login_button(LoginSteps.java:48)\n\tat ✽.user clicks the login button(file:///home/fcastillo-admin/IdeaProjects/cucumberFresh/src/test/resources/Features/login.feature:12)\n",
+              "duration": 536000000,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "user clicks the login button",
+            "match": {
+              "location": "StepDefinitions.Login.LoginSteps.user_clicks_the_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "the user is navigated to the Home page",
+            "match": {
+              "location": "StepDefinitions.Login.LoginSteps.the_user_is_navigated_to_the_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SmokeRegression"
+          },
+          {
+            "name": "@SmokeTest"
+          }
+        ]
+      }
+    ],
+    "name": "Login into app",
+    "description": "",
+    "id": "login-into-app",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/login.feature",
+    "tags": [
+      {
+        "name": "@SmokeRegression",
+        "type": "Tag",
+        "location": {
+          "line": 5,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
