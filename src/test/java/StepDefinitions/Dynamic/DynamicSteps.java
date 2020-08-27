@@ -50,7 +50,6 @@ public class DynamicSteps {
         System.out.println("Checkbox is re-checked");
         driver.close();
         driver.quit();
-
     }
 
     @And("the text field is enabled and filled")
@@ -82,7 +81,6 @@ public class DynamicSteps {
         driver.findElement(By.xpath("//button[contains(text(),'Remove')]")).click();
         driver.findElement(By.xpath("//div[@id='loading']")).isDisplayed();
         driver.findElement(By.xpath("//p[@id='message']")).isDisplayed();
-        Thread.sleep(2000);
         System.out.println("It's gone");
     }
 
