@@ -27,7 +27,6 @@ public class LoginSteps {
 // Only Given functions will be set here
     @Given("the user is on the Login page")
     public void the_user_is_on_the_login_page() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         System.out.println("Login page");
         browser();
         driver.navigate().to("https://the-internet.herokuapp.com/login");
@@ -36,7 +35,6 @@ public class LoginSteps {
 
     @Given("the user is in the Secure Area page")
     public void the_user_is_on_the_Secure_Area_page() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         browser();
         driver.navigate().to("https://the-internet.herokuapp.com/login");
         driver.findElement(By.cssSelector("#username")).sendKeys("tomsmith");
@@ -48,7 +46,6 @@ public class LoginSteps {
 // Only And functions will be set here
     @And("enters valid username and valid password")
     public void enters_valid_username_and_valid_password() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         System.out.println("entered username and password");
         driver.findElement(By.cssSelector("#username")).sendKeys("tomsmith");
         driver.findElement(By.cssSelector("#password")).sendKeys("SuperSecretPassword!");
@@ -56,7 +53,6 @@ public class LoginSteps {
 
     @And("enters invalid username and invalid password")
     public void enters_invalid_username_and_invalid_password() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         System.out.println("entered username and password");
         driver.findElement(By.cssSelector("#username")).sendKeys("Frno009");
         driver.findElement(By.cssSelector("#password")).sendKeys("Password");
@@ -64,7 +60,6 @@ public class LoginSteps {
 
     @And("error message appears")
     public void error_message_appears() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         System.out.println("Error Message Appeared");
         driver.findElement(By.xpath("//div[contains(text(),'Your username is invalid!')]"));
         driver.close();
@@ -74,14 +69,12 @@ public class LoginSteps {
 // Only When functions will be set here
     @When("user clicks the login button")
     public void user_clicks_the_login_button() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         System.out.println("Login Button clicked");
         driver.findElement(By.xpath("//i[@class='fa fa-2x fa-sign-in']")).click();
     }
 
     @When("user clicks the logout button")
     public void user_clicks_the_logout_button() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         System.out.println("Logout Button clicked");
         driver.findElement(By.xpath("//a/i[@class='icon-2x icon-signout' and contains(text(),'Logout')]")).click();
     }
@@ -89,7 +82,6 @@ public class LoginSteps {
 //Only Then functions will be set here
     @Then("the user is navigated to the Secure Area page")
     public void the_user_is_navigated_to_the_secure_area_page() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         driver.findElement(By.xpath("//div[contains(text(),'You logged into a secure area!')]"));
         System.out.println("Logged in");
         driver.close();
@@ -98,7 +90,6 @@ public class LoginSteps {
 
     @Then("the user is navigated to the Login page")
     public void the_user_is_navigated_to_the_login_page() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         driver.findElement(By.xpath("//div[contains(text(),'You logged out of the secure area!')]"));
         System.out.println("Logged out");
         driver.close();
@@ -107,7 +98,6 @@ public class LoginSteps {
 
     @Then("the user is not able to login")
     public void the_user_is_not_able_to_login() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         System.out.println("Not Able to Login");
         System.out.println(driver.getCurrentUrl());
     }
