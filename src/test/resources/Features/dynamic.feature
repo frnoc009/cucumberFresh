@@ -1,6 +1,7 @@
 #Author: Fernando Castillo
 #Date: 8/21/20
-#Description: This is the Dynamic Controls page for a cucumber framework
+#Description: This is the Dynamic Controls (Checkbox marked and unmarked as well as enabled and disabled textfield)
+#page for a cucumber framework
 
 @SmokeRegression
 Feature: Use different dynamic elements in the app
@@ -23,3 +24,10 @@ Feature: Use different dynamic elements in the app
     Given the user is on the Dynamic Controls page
     When enable button is clicked
     Then the text field is enabled and text can be entered
+
+  @SmokeTest
+  Scenario: User is able to enable and disable the text field after input
+    Given the user is on the Dynamic Controls page
+    And the text field is enabled and filled
+    When disable button is clicked
+    Then the text field will be disabled
