@@ -1,6 +1,6 @@
 #Author: Fernando Castillo
 #Date: 8/20/20
-#Description: This is the JS Alert page for a cucumber framework
+#Description: This is the JS Alert (Alert, Confirm and Prompt) page for a cucumber framework
 
 @SmokeRegression
 Feature: Trigger different JS Alerts boxes in the app
