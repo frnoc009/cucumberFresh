@@ -26,4 +26,21 @@ public class GeolocationSteps {
         driver.manage().timeouts().pageLoadTimeout(40,TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
+
+    @Given("User is on the geolocation page")
+    public void user_is_on_the_geolocation_page() throws Throwable {
+        browser();
+        driver.navigate().to("https://the-internet.herokuapp.com/geolocation");
+    }
+
+    @When("Where am I button is clicked")
+    public void where_am_i_button_is_clicked() {
+        driver.findElement(By.xpath("//button[contains(text(),'Where am I?')]")).click();
+    }
+
+    @Then("the Longitude and latitude are presented")
+    public void the_longitude_and_latitude_are_presented() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
 }
