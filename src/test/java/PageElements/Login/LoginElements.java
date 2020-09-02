@@ -22,14 +22,4 @@ public enum LoginElements implements CommonElements{
 
     private By selector;
     private String query;
-
-    @Override
-    public By getSelector() {
-        return null;
-    }
-
-    @Override
-    public String getQuery() {
-        return null;
-    }
 }

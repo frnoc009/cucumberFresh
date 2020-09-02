@@ -4,8 +4,6 @@ import PageElements.Login.LoginElements;
 import helpers.Browser;
 import helpers.SeleniumHelper;
 import io.cucumber.java.en.*;
-import javafx.scene.paint.LinearGradient;
-import org.openqa.selenium.By;
 
 
 public class LoginSteps {
@@ -23,13 +21,13 @@ public class LoginSteps {
     public void the_user_is_on_the_login_page() throws Throwable {
 
         System.out.println("Login page");
-        browser.open_browser();
+        browser.openBrowser();
         browser.navigate("https://the-internet.herokuapp.com/login");
     }
 
     @Given("the user is in the Secure Area page")
     public void the_user_is_on_the_Secure_Area_page() throws Throwable {
-        browser.open_browser();
+        browser.openBrowser();
         browser.navigate("https://the-internet.herokuapp.com/login");
         browser.setTextUI(LoginElements.LOGIN_USERNAME.getSelector(), "tomsmith");
         //browser.setTextUI(LoginElements.LOGIN_USERNAME.getQuery()).sendKeys("tomsmith");

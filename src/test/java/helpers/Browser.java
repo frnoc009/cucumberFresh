@@ -22,7 +22,7 @@ public class Browser {
         this.seleniumWait = seleniumWait;
     }
 
-    public void open_browser() throws Throwable {
+    public void openBrowser() throws Throwable {
         String projectPath=System.getProperty("user.dir");
         System.out.println("Project path is: "+projectPath);
         System.setProperty("webdriver.chrome.driver",
@@ -32,6 +32,8 @@ public class Browser {
         webDriver.manage().timeouts().pageLoadTimeout(40,TimeUnit.SECONDS);
         webDriver.manage().window().maximize();
     }
+
+    public void disabledNotificationBrowser(){}
 
     public void back() {
         webDriver.navigate().back();

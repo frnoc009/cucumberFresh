@@ -1,6 +1,5 @@
 package PageElements.DynamicElements;
 
-import PageElements.DynamicElements.DynamicElements;
 import PageElements.CommonElements;
 import org.openqa.selenium.By;
 import lombok.AllArgsConstructor;
@@ -17,7 +16,6 @@ public enum DynamicElements implements CommonElements{
     ENABLE_BUTTON(By.xpath("//button[contains (text(),'Enable')]"), ""),
     ENABLE_MSG(By.xpath("//p[@id='message']"), ""),
     TEXT_FIELD_ENABLED(By.xpath("//form[@id='input-example']//input"), "");
-
 
     private By selector;
     private String query;
