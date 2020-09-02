@@ -1,14 +1,11 @@
 package PageElements.DynamicElements;
 
-import PageElements.CommonElements;
+//import PageElements.CommonElements;
 import org.openqa.selenium.By;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+//import lombok.AllArgsConstructor;
+//import lombok.Getter;
 
-
-@Getter
-@AllArgsConstructor
-public enum DynamicElements implements CommonElements{
+public enum DynamicElements {
 
     MARK_CHECKBOX(By.xpath("//div[@id='checkbox']//input"), ""),
     REMARK_CHECKBOX(By.xpath("//input[@id='checkbox']\""), ""),
@@ -19,4 +16,10 @@ public enum DynamicElements implements CommonElements{
 
     private By selector;
     private String query;
+
+    DynamicElements(By selector, String query) {
+        this.selector = selector;
+        this.query = query;
+    }
+
 }

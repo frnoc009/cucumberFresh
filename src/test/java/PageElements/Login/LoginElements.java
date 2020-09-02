@@ -1,15 +1,12 @@
 package PageElements.Login;
 
-import PageElements.CommonElements;
+//import PageElements.CommonElements;
 import org.openqa.selenium.By;
 import java.lang.String;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-
-@Getter
-@AllArgsConstructor
-public enum LoginElements implements CommonElements{
+public enum LoginElements {
 
     LOGIN_USERNAME(By.cssSelector("#username"),""),
     LOGIN_PASSWORD(By.cssSelector("#password"),""),
@@ -20,6 +17,20 @@ public enum LoginElements implements CommonElements{
     LOGOUT_MSG(By.xpath("//div[contains(text(),'You logged out of the secure area!')]"),"");
 
 
-    private By selector;
-    private String query;
+    By selector;
+    String query;
+
+    LoginElements(By selector, String query) {
+        this.selector = selector;
+        this.query = query;
+    }
+
+    public By getSelector() {
+        return selector;
+    }
+
+    public String getQuery() {
+        return query;
+    }
+
 }
