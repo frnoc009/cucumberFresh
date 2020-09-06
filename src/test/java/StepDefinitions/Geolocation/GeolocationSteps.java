@@ -2,21 +2,14 @@ package StepDefinitions.Geolocation;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 public class GeolocationSteps {
 
     WebDriver driver = null;
-    WebElement driverElement = null;
-    WebDriverWait driverWait = null;
 
     public void disableNotificationBrowser() throws Throwable {
         String projectPath=System.getProperty("user.dir");
@@ -53,5 +46,7 @@ public class GeolocationSteps {
         driver.findElement(By.xpath("//div[@id='long-value']")).isDisplayed();
         String text2 = driver.findElement(By.xpath("//div[@id='long-value']")).getText();
         System.out.println(text2);
+        driver.close();
+        driver.quit();
     }
 }
